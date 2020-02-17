@@ -38,9 +38,8 @@ const displaySlides = () => {
 };
 displaySlides();
 
-
-let slideIndex = 0;
 //Showing slides
+let slideIndex = 0;
 const showSlides = () => {
     const slides = document.querySelectorAll('.mySlides');
     slides.forEach(slide => {
@@ -51,5 +50,4 @@ const showSlides = () => {
     slides[slideIndex - 1].style.display = 'block';
     setTimeout(showSlides, 2400);
 }
-
 showSlides();
