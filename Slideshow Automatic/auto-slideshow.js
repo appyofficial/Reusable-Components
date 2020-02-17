@@ -38,33 +38,18 @@ const displaySlides = () => {
 };
 displaySlides();
 
-//set the value of slide index to 0 if using automatic slides
-let slideIndex = 1;
-//Showing slides
-const showSlides = (index) => {
-    const slides = document.querySelectorAll('.mySlides');
-    const dots = document.querySelectorAll('.dot');
-    if (index > slides.length) { slideIndex = 1 };
-    if (index < 1) { slideIndex = slides.length };
 
+let slideIndex = 0;
+//Showing slides
+const showSlides = () => {
+    const slides = document.querySelectorAll('.mySlides');
     slides.forEach(slide => {
         slide.style.display = 'none'
     });
-
-    dots.forEach(dot => {
-        dot.className = dot.className.replace("active", "");
-    });
-
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; };
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 2400);
 }
 
-showSlides(slideIndex);
-
-const plusSlides = (index) => {
-    showSlides(slideIndex += index)
-}
-
-const currentSlide = (index) => {
-    showSlides(slideIndex = index);
-}
+showSlides();
