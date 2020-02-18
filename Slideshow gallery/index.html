@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show Gallery</title>
+    <meta name="Description"
+        content="Slideshow gallery is a web component which show pictures in a slide. Feel free to use it in your project and to get in touch with me please visit appysharma.com">
+    <meta name="Keywords" content="appy sharma, web developer in malmo, sweden, components, web, javascript, css, html">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <div class="gallery-container">
+        <div class="slides-container"></div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- Image text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+    </div>
+    <!--scripts-->
+    <script src="gallery.js"></script>
+</body>
+
+</html>
