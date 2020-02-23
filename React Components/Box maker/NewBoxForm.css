@@ -1,0 +1,21 @@
+.form {
+    display: flex;
+    max-width: 400px;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.form label {
+    color: black;
+    text-decoration: underline;
+}
+
+.form input {
+    font-family: 'Kosugi', monospace;
+    color: darkslateblue;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid grey;
+    margin: 10px;
+}
